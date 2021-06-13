@@ -4,7 +4,7 @@ import com.tinyurl.app.pojo.RequestObject;
 
 public interface TinyUrlService {
 
-    public void encodeActualUrl(RequestObject requestObject);
+    public String encodeActualUrl(RequestObject requestObject);
 
     public void decodeTinyUrl(RequestObject requestObject);
 }

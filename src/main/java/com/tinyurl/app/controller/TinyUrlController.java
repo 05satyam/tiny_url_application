@@ -16,7 +16,7 @@ public class TinyUrlController {
     @Autowired
     private TinyUrlService tinyUrlService;
 
-    @RequestMapping(value = "/encode", method = RequestMethod.POST)
+    @RequestMapping(value = "/create-short", method = RequestMethod.POST)
     public ResponseEntity<Object> getTinyUrl(@RequestBody RequestObject request) {
 
         return new ResponseEntity<>("", HttpStatus.OK);
@@ -24,7 +24,7 @@ public class TinyUrlController {
 
 
 
-    @RequestMapping(value = "/decode", method = RequestMethod.GET)
+    @RequestMapping(value = "/shortUrl", method = RequestMethod.GET)
     public ResponseEntity<Object> getActualUrl(@RequestBody RequestObject request) {
 
         return new ResponseEntity<>("", HttpStatus.OK);
