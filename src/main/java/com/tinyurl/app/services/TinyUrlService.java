@@ -6,5 +6,5 @@ public interface TinyUrlService {
 
     public String encodeActualUrl(RequestObject requestObject);
 
-    public void decodeTinyUrl(RequestObject requestObject);
+    public String decodeTinyUrl(RequestObject requestObject);
 }

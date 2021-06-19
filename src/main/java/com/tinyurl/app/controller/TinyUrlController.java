@@ -18,15 +18,15 @@ public class TinyUrlController {
 
     @RequestMapping(value = "/create-short", method = RequestMethod.POST)
     public ResponseEntity<Object> getTinyUrl(@RequestBody RequestObject request) {
-
-        return new ResponseEntity<>("", HttpStatus.OK);
+        String shortUrl = tinyUrlService.encodeActualUrl(request);
+        return new ResponseEntity<>(shortUrl, HttpStatus.OK);
     }
 
 
 
     @RequestMapping(value = "/shortUrl", method = RequestMethod.GET)
     public ResponseEntity<Object> getActualUrl(@RequestBody RequestObject request) {
-
-        return new ResponseEntity<>("", HttpStatus.OK);
+        String longUrl = tinyUrlService.decodeTinyUrl(request);
+        return new ResponseEntity<>(longUrl, HttpStatus.OK);
     }
 }

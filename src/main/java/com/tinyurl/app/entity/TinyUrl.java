@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Getter
@@ -21,6 +22,6 @@ public class TinyUrl {
 
     private String originalUrl;
     private String hash;
-    private Timestamp createdAt;
+    private Date expireDate;
 
 }
