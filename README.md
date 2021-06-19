@@ -7,8 +7,16 @@ As of now hash is not implemented and stored in db and no user registration is a
 Steps:  
 
         1.1. enter the url and expiration time in postman json object. 
+              
+              sample postman json to get tiny url
+                 {
+	                "actualUrl":"www.test-tiny-url.com/sample-test-case-1",
+                        "expiryDate":"2022-01-23"
+                  }
         
         1.2 after submiting a tiny-url will be given in response.
+                
+                sample postman response: www.test-tiny-url.com/sample-test-case-1
           
           1.2.1 if entered url expiration time is over then record will be deleted and Link expired! will be shown
           
