@@ -5,6 +5,7 @@ This is a tiny url spring boot application. Here, encoding/decoding or url is do
 As of now hash is not implemented and stored in db and no user registration is also handled. 
 
 Steps:  
+
         1.1. enter the url and expiration time in postman json object. 
         
         1.2 after submiting a tiny-url will be given in response.
