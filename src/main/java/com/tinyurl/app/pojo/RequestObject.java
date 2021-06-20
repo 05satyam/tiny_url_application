@@ -3,6 +3,9 @@ package com.tinyurl.app.pojo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
+import java.sql.Date;
+
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -12,4 +15,5 @@ import lombok.*;
 public class RequestObject {
     String actualUrl;
     String tinyUrl;
+    Date expiryDate;
 }

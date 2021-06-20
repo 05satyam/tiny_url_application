@@ -8,20 +8,20 @@ public class BaseConvertor {
     private static final String allowedString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     private char[] allowedCharacters = allowedString.toCharArray();
     private int base = allowedCharacters.length;
-
+    private static final String baseUrl = "www.url.com/";
     public String encode(long input){
         var encodedString = new StringBuilder();
 
         if(input == 0) {
-            return String.valueOf(allowedCharacters[0]);
+            return baseUrl+ String.valueOf(allowedCharacters[0]);
         }
 
         while (input > 0) {
             encodedString.append(allowedCharacters[(int) (input % base)]);
             input = input / base;
         }
-
-        return encodedString.reverse().toString();
+        System.out.println("short url : "+encodedString.reverse().toString() );
+        return baseUrl +  encodedString.reverse().toString();
     }
 
     public long decode(String input) {

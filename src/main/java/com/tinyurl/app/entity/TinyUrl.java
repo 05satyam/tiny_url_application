@@ -1,5 +1,6 @@
 package com.tinyurl.app.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,8 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
 @Getter
@@ -22,6 +23,9 @@ public class TinyUrl {
 
     private String originalUrl;
     private String hash;
+
     private Date expireDate;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy")
+    private Date createdAt;
 
 }
