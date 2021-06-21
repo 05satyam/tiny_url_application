@@ -16,11 +16,13 @@ Steps:
         
         1.2 after submiting a tiny-url will be given in response.
                 
-                sample postman response: www.test-tiny-url.com/sample-test-case-1
+                sample postman response: www.test-tiny-url.com/a
           
           1.2.1 if entered url expiration time is over then record will be deleted and Link expired! will be shown
           
           1.2.2 if entered url is not expried then original url will be sent back in response.
+	  	
+		sample postman response: www.test-tiny-url.com/sample-test-case-1
           
           
 NOTE: as of now same url can have multiple short url as no such handling is done
